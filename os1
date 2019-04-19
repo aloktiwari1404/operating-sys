@@ -68,3 +68,25 @@ for(sum = 0, i = 0; x != 0;)
 		else
 		prio[b]+=2;
 	}
+if(temp[i] == 0 && count == 1)
+	{
+		x--;
+		printf("\nProcess[%d]\t\t%d\t\t\t %d\t\t %d\t\t%d", p[i],b_time[i], sum-a_time[i], sum-a_time[i]-b_time[i],prio[i]);
+		wait = wait+sum-a_time[i]-b_time[i];
+		tat = tat+sum-a_time[i];
+		count = 0;
+	}
+	if(i == limit - 1)
+	{
+		i = 0;
+	}
+	else if(a_time[i + 1] <= sum)
+	{
+		i++;}
+	else
+	{
+		i = 0;
+	}
+	}
+	return 0;
+}
